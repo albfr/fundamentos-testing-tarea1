@@ -22,7 +22,7 @@ func getGreeting(hour int) string {
 		return "Buenas tardes"
 	}
 
-	return ""
+	return "Buenas noches"
 }
 
 func getCurrentHour() int {
