@@ -14,7 +14,7 @@ func getGreeting(hour int) string {
 	// [6, 12[
 	// [12, 20[
 
-	return ""
+	return "Buenos días"
 }
 
 func getCurrentHour() int {
