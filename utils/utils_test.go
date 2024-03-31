@@ -2,10 +2,21 @@ package utils
 
 import "testing"
 
+type addTest struct {
+	arg1     int
+	expected string
+}
+
+var addTests = []addTest{
+	{8, "Buenos días"},
+}
+
 func TestGetGreeting(t *testing.T) {
-	want := "Buenos días"
-	hour := 8
-	if got := getGreeting(hour); got != want {
-		t.Errorf("getGreeting(%d) = \"%s\", want = %s", hour, got, want)
+
+	for _, test := range addTests {
+		if got := getGreeting(test.arg1); got != test.expected {
+			t.Errorf("getGreeting(%d) = \"%s\", want = %s", test.arg1, got, test.expected)
+		}
 	}
+
 }
