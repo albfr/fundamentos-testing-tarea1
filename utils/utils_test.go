@@ -10,6 +10,7 @@ type addTest struct {
 var addTests = []addTest{
 	{8, "Buenos días"},
 	{13, "Buenas tardes"},
+	{22, "Buenas noches"},
 }
 
 func TestGetGreeting(t *testing.T) {
