@@ -9,13 +9,14 @@ type addTest struct {
 
 var addTests = []addTest{
 	{8, "Buenos días"},
+	{13, "Buenas tardes"},
 }
 
 func TestGetGreeting(t *testing.T) {
 
 	for _, test := range addTests {
 		if got := getGreeting(test.arg1); got != test.expected {
-			t.Errorf("getGreeting(%d) = \"%s\", want = %s", test.arg1, got, test.expected)
+			t.Errorf("getGreeting(%d) = \"%s\", want = \"%s\"", test.arg1, got, test.expected)
 		}
 	}
 
