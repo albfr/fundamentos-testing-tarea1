@@ -17,7 +17,7 @@ func getGreeting(hour int) string {
 	if 6 <= hour && hour < 12 {
 		return "Buenos días"
 	}
-	return ""
+	return "Buenas tardes"
 }
 
 func getCurrentHour() int {
