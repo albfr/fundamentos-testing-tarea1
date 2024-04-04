@@ -5,6 +5,9 @@ import (
 )
 
 func IsPalindome(s string) bool {
+	if len(s) == 1 {
+		return true
+	}
 	return false
 }
 
