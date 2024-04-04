@@ -5,10 +5,13 @@ import (
 )
 
 func IsPalindome(s string) bool {
-	if len(s) == 1 {
-		return true
+	var n int = len(s)
+	for i := 0; i < n/2; i++ {
+		if s[i] != s[n-1-i] {
+			return false
+		}
 	}
-	return false
+	return true
 }
 
 func ReverseString(name string) string {
