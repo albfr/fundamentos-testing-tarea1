@@ -18,6 +18,18 @@ type addGreetingTest struct {
 	expected string
 }
 
+func TestReverseString(t *testing.T) {
+
+	for _, test := range addReverseStringTests {
+		got := ReverseString(test.s)
+		want := test.expected
+		if got != want {
+			t.Errorf("ReverseString(%s) = \"%q\", want = \"%s\"", test.s, got, want)
+		}
+	}
+
+}
+
 var addGreetingTests = []addGreetingTest{
 	{8, "Buenos días"},
 	{13, "Buenas tardes"},
