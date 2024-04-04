@@ -4,6 +4,10 @@ import (
 	"time"
 )
 
+func IsPalindome(s string) bool {
+	return false
+}
+
 func ReverseString(name string) string {
 	r := []rune(name)
 	n := len(name)
