@@ -1,12 +1,17 @@
 package utils
 
-import "time"
+import (
+	"time"
+)
+
+func ReverseString(name string) string {
+}
 
 func Hello(name string) string {
 
 	var ct int = getCurrentHour()
 
-	return getGreeting(ct)
+	return "¡" + getGreeting(ct) + " " + name + "!"
 }
 
 func getGreeting(hour int) string {
