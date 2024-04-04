@@ -7,14 +7,20 @@ import (
 )
 
 func main() {
+
+	if len(os.Args) < 2 {
+		fmt.Println("I need your name -.-")
+		os.Exit(1)
+	}
+
 	name := os.Args[1]
-	fmt.Println("%s", utils.Hello(name))
+	fmt.Println(utils.Hello(name))
 
 	var input string
 	fmt.Scanln(&input)
 
 	for input != "Stop!" {
-		fmt.Println("%s", utils.ReverseString(input))
+		fmt.Println(utils.ReverseString(input))
 		if utils.IsPalindome(input) {
 			fmt.Println("¡Bonita Palabra!")
 		}
