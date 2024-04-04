@@ -1,8 +1,22 @@
 package utils
 
 import (
+	"strconv"
 	"testing"
 )
+
+func TestIsPalindrome(t *testing.T) {
+	s := "a"
+	got := IsPalindome(s)
+	want := true
+	str_got := strconv.FormatBool(got)
+	str_want := strconv.FormatBool(want)
+
+	if got != want {
+		t.Errorf("IsPalindrome(\"%s\") = %s, want = %s", s, str_got, str_want)
+	}
+
+}
 
 type addReverseStringTest struct {
 	s        string
