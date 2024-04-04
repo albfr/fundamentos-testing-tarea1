@@ -5,6 +5,12 @@ import (
 )
 
 func ReverseString(name string) string {
+	r := []rune(name)
+	n := len(name)
+	for i := 0; i < len(name)/2; i++ {
+		r[i], r[n-1-i] = r[n-1-i], r[i]
+	}
+	return string(r)
 }
 
 func Hello(name string) string {
